@@ -28,12 +28,22 @@
   ul { padding-left: 1.3em; }
   a { color: #0b5fff; }
   code { background: rgba(127,127,127,0.15); padding: 1px 5px; border-radius: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 1.2em 0; font-size: 0.95rem; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid rgba(127,127,127,0.25); vertical-align: top; }
+  th { font-weight: 600; }
+  @media (max-width: 600px) {
+    table, thead, tbody, th, td, tr { display: block; }
+    thead { display: none; }
+    td { border-bottom: none; padding: 4px 0; }
+    tr { padding-bottom: 14px; border-bottom: 1px solid rgba(127,127,127,0.25); }
+    td::before { content: attr(data-label); display: block; font-weight: 600; font-size: 0.85rem; color: #777; }
+  }
 </style>
 </head>
 <body>
 
 <h1>Privacy Policy for DailyGiggle</h1>
-<p class="updated">Last updated: July 26, 2026</p>
+<p class="updated">Last updated: July 27, 2026</p>
 
 <p>
   DailyGiggle ("the App", "we", "us") is developed by DigitProdAT. This Privacy
@@ -93,7 +103,41 @@
   identify you individually from it.
 </p>
 
-<h2>4. Notifications</h2>
+<h2>4. Why We Collect Each Piece of Data</h2>
+<p>
+  For transparency, here is a summary of every data type collected by the
+  third-party SDKs described above, why it's collected, and who it's shared
+  with:
+</p>
+<table>
+  <thead>
+    <tr><th>Data type</th><th>Why we collect it</th><th>Shared with</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Data type">Advertising ID</td>
+      <td data-label="Why we collect it">Used to show and measure ads through Google AdMob, and to limit how many times you see the same ad. Not linked to your identity.</td>
+      <td data-label="Shared with">Google AdMob</td>
+    </tr>
+    <tr>
+      <td data-label="Data type">Approximate location</td>
+      <td data-label="Why we collect it">Used by Google AdMob to serve ads relevant to your general region. Never precise, never linked to your identity.</td>
+      <td data-label="Shared with">Google AdMob</td>
+    </tr>
+    <tr>
+      <td data-label="Data type">Firebase installation identifier</td>
+      <td data-label="Why we collect it">An anonymous identifier used to distinguish app installs for analytics. Not linked to your name or account, since the App has no account system.</td>
+      <td data-label="Shared with">Google Firebase</td>
+    </tr>
+    <tr>
+      <td data-label="Data type">App interaction events</td>
+      <td data-label="Why we collect it">Counts which features you use — e.g. viewing the archive, sharing a giggle, requesting an extra giggle — so we can understand which parts of the App are useful. No joke content or personal data is included.</td>
+      <td data-label="Shared with">Google Firebase</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>5. Notifications</h2>
 <p>
   If you enable the daily reminder notification, the time and day(s) you
   choose are stored locally on your device to schedule it. This data is not
@@ -101,7 +145,7 @@
   local notification.
 </p>
 
-<h2>5. Children's Privacy</h2>
+<h2>6. Children's Privacy</h2>
 <p>
   DailyGiggle is not directed at children under the age of 13 (or the
   equivalent minimum age in your jurisdiction), and we do not knowingly
@@ -109,7 +153,7 @@
   configured for a general audience, not for child-directed treatment.
 </p>
 
-<h2>6. Data Retention and Your Choices</h2>
+<h2>7. Data Retention and Your Choices</h2>
 <p>
   Because all app data (read jokes, settings) is stored only on your device,
   you can erase it at any time by clearing the App's storage from your
@@ -118,7 +162,7 @@
   App's Archive screen.
 </p>
 
-<h2>7. Changes to This Policy</h2>
+<h2>8. Changes to This Policy</h2>
 <p>
   We may update this Privacy Policy from time to time. Material changes will
   be reflected by updating the "Last updated" date above. Continued use of
@@ -126,7 +170,7 @@
   policy.
 </p>
 
-<h2>8. Contact Us</h2>
+<h2>9. Contact Us</h2>
 <p>
   If you have questions about this Privacy Policy or how your information is
   handled, contact us at:
